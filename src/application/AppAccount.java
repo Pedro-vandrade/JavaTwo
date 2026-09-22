@@ -18,8 +18,13 @@ public class AppAccount {
         sc.nextLine();
         String holder = sc.nextLine();
         System.out.print("Is there a initial deposit? (y/n) ");
-        char response = sc.next().charAt(0);
-        if (response == 'y' || response =='Y') {
+        String response = sc.next().trim();
+        while(!response.equalsIgnoreCase("y") && !response.equalsIgnoreCase("n")){
+            System.out.println("Invalid input. Please enter only 'Y' or 'N'. ");
+            System.out.print("Is there a initial deposit? (y/n) ");
+            response = sc.next().trim();
+        }
+        if (response.equalsIgnoreCase("y")) {
             System.out.print(("Enter initial deposit value: "));
             double initialdeposit = sc.nextDouble();
             account = new Account(number, holder, initialdeposit);
@@ -42,7 +47,6 @@ public class AppAccount {
         account.withdraw(wValue);
         System.out.println("Updated account data");
         System.out.println(account);
-
 
 
         sc.close();
