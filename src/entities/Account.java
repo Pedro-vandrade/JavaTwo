@@ -41,4 +41,13 @@ public class Account {
     public void withdraw(double amount){
         balance -= amount + 2.5;
     }
+    public String toString(){
+        return "Account: "
+                + number
+                +", Holder: "
+                + holder
+                +", Balance: "
+                + String.format("%.2f", balance);
+    }
+
 }
