@@ -28,7 +28,9 @@ public class Produto {
     }
 
     public int getQuantity() {
-        return quantity;
+        return 0;
+    }
 
+    public void setQuantity(int i) {
     }
 }
