@@ -1,10 +1,9 @@
 package application;
 
-import java.util.Arrays;
 import java.util.Locale;
 import java.util.Scanner;
 
-public class NumInt {
+public class ExercicioVetor01 {
     static void main(String[] args) {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
